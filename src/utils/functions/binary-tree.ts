@@ -59,6 +59,7 @@ export class BinaryTree {
         }
     }
 
+    // сначала делаем действие, потом только спускаемся вниз по дереву  (влево, вправо)
     preOrder({ node, callback }: OrderProps) {
         if (!node) {
             return;
@@ -69,16 +70,39 @@ export class BinaryTree {
         }
 
         // рекурсия вниз влево
-        this.preOrder({node: node.left, callback })
-        this.preOrder({node: node.right, callback })
+        this.preOrder({ node: node.left, callback })
+        this.preOrder({ node: node.right, callback })
     }
 
+    // колбэк вызывается между значениями
     inOrder({ node, callback }: OrderProps) {
+        if (!node) {
+            return;
+        }
 
+        // рекурсия вниз влево
+        this.preOrder({ node: node.left, callback })
+
+        if (callback) {
+            callback(node);
+        }
+
+        this.preOrder({ node: node.right, callback })
     }
 
+    // колбэк после значений
     postOrder({ node, callback }: OrderProps) {
+        if (!node) {
+            return;
+        }
 
+        // рекурсия вниз влево
+        this.preOrder({ node: node.left, callback })
+        this.preOrder({ node: node.right, callback })
+
+        if (callback) {
+            callback(node);
+        }
     }
 
     // обход дерева в глубину

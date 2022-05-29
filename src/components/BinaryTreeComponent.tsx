@@ -1,6 +1,5 @@
 import React from 'react';
 import { BinaryTree, Methods } from '../utils/functions/binary-tree';
-import { log } from 'util';
 
 export const BinaryTreeComponent = () => {
     const myTree = new BinaryTree();
@@ -15,9 +14,11 @@ export const BinaryTreeComponent = () => {
     myTree.addNode(1);
     myTree.addNode(22);
     myTree.traverseDepthFirstSearch({
-        method: Methods.PreOrder,
+        method: Methods.InOrder,
         callback: (node) => console.log(node.value)
     })
     console.log(myTree);
     return <></>
 };
+
+// preOrder: 8 5 4 1 7 11 10 12 16 22

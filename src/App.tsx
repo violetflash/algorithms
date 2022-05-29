@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 // import { BinarySearch } from './components/BinarySearch';
-import { BinaryTreeComponent } from './components/BinaryTreeComponent';
+// import { BinaryTreeComponent } from './components/BinaryTreeComponent';
+import { SortingAlgorithms } from './components/SortingAlgorithms';
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <div className="App">
       <header className="App-header"/>
         {/*<BinarySearch />*/}
-        <BinaryTreeComponent />
+        {/*<BinaryTreeComponent />*/}
+        <SortingAlgorithms />
     </div>
   );
 }

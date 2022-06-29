@@ -3,6 +3,7 @@ import './App.css';
 // import { BinarySearch } from './components/BinarySearch';
 // import { BinaryTreeComponent } from './components/BinaryTreeComponent';
 import { SortingAlgorithms } from './components/SortingAlgorithms';
+import { Functions } from './components/Functions';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         {/*<BinarySearch />*/}
         {/*<BinaryTreeComponent />*/}
         <SortingAlgorithms />
+        <Functions />
     </div>
   );
 }
